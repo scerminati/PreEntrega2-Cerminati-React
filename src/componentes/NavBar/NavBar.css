@@ -6,6 +6,8 @@ header {
   overflow: hidden;
   border: 4px bisque solid;
   margin-bottom: 10px;
+  position: sticky;
+  top: 0;
 }
 
 li {

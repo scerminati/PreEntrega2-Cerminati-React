@@ -12,10 +12,10 @@ const ItemListContainer = ({ saludoInicial }) => {
   }, []);
 
   return (
-    <>
+    <main>
       <h2>{saludoInicial}</h2>
       <ItemList productos={productos} />
-    </>
+    </main>
   );
 };
 
