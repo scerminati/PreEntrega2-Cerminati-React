@@ -1,13 +1,22 @@
 .detalle {
   display: flex;
   flex-direction: row;
+  gap: 20px;
   padding: 10px;
   margin: 10px;
+  align-items: center;
   h2 {
     text-align: center;
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
   }
 
   img {
     width: 400px;
+  }
+
+  .textoDetalle p {
+    padding: 3px;
+    text-align: justify;
   }
 }

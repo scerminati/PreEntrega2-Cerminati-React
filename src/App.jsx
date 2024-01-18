@@ -1,7 +1,9 @@
 import React from "react";
 import NavBar from "./componentes/NavBar/NavBar";
+import Footer from "./componentes/Footer/Footer";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
+import PaginaError from "./componentes/PaginaError/PaginaError";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -16,8 +18,9 @@ const App = () => {
             element={<ItemListContainer />}
           />
           <Route path="/item/:idItem" element={<ItemDetailContainer />} />
-          <Route path="*" element={<p>Se fue</p>} />
+          <Route path="*" element={<PaginaError />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

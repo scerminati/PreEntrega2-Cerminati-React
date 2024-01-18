@@ -15,10 +15,17 @@ const ItemListContainer = () => {
       .catch((error) => console.log(error));
   }, [idCategoria]);
 
+  const titulo = idCategoria
+    ? `Categoría: Juegos ${idCategoria
+        .charAt(0)
+        .toUpperCase()}${idCategoria.slice(1)}`
+    : "¡Bienvenido a la Tienda!";
+
   return (
-    <main>
+    <body>
+      <h2>{titulo}</h2>
       <ItemList productos={productos} />
-    </main>
+    </body>
   );
 };
 
