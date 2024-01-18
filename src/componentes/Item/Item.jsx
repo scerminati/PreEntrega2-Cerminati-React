@@ -1,5 +1,6 @@
 import React from "react";
-import "./Item.css";
+import "./Item.scss";
+import { Link } from "react-router-dom";
 
 const Item = ({
   id,
@@ -34,7 +35,9 @@ const Item = ({
       </div>
       <p>Precio: ${precio.toFixed(2)}</p>
 
-      <button>Ver Detalles</button>
+      <Link to={`/item/${id}`} className="linkBoton">
+        <button>Ver Detalles</button>
+      </Link>
     </div>
   );
 };

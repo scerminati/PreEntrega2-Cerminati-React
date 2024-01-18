@@ -1,22 +1,35 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import "./NavBar.css";
+import "./NavBar.scss";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <header>
       <img src="../images/banner.png" className="banner" alt="" />
       <div className="navBar">
-        <div className="titulos">
-          <h1>SoGames</h1>
-          <h2>Tienda de Juegos de Mesa</h2>
-        </div>
+        <Link to="/">
+          <div className="titulos">
+            <h1>SoGames</h1>
+            <h2>Tienda de Juegos de Mesa</h2>
+          </div>
+        </Link>
         <ul>
-          <li>Top 10</li>
-          <li>Competitivos</li>
-          <li>Cooperativos</li>
-          <li>Estrategia</li>
-          <li>Familia</li>
+          <li>
+            <NavLink to="/categoria/top10">Top 10</NavLink>
+          </li>
+          <li>
+            <NavLink to="/categoria/tematicos">Temáticos</NavLink>
+          </li>
+          <li>
+            <NavLink to="/categoria/party">Party</NavLink>
+          </li>
+          <li>
+            <NavLink to="/categoria/estrategia">Estrategia</NavLink>
+          </li>
+          <li>
+            <NavLink to="/categoria/familia">Familia</NavLink>
+          </li>
         </ul>
         <CartWidget />
       </div>
